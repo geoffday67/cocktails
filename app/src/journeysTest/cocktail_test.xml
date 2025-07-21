@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!-- @formatter:off -->
+<journey name="Find a cocktail">
+    <description>Check it uses the right type of glass</description>
+    <actions>
+        <action>Choose fizzy water, scrolling if needed</action><action>Check that four drinks are listed </action><action>Select a drink that's the colour of plums</action><action>Check the instructions mention a highball glass</action>
+    </actions>
+</journey>
