@@ -53,12 +53,12 @@ class MainActivity : ComponentActivity() {
                                 val ingredientsViewModel: IngredientsViewModel by viewModels()
                                 IngredientsScreen(
                                     cocktailsState = ingredientsViewModel.stateFlow.collectAsState(CocktailsState.Empty()).value,
-                                    onIngredientSelected = {
-                                        ingredientsViewModel.handleIngredientSelected(
-                                            ingredient = it,
-                                            navController = navController,
+                                    onIntent = {
+                                        ingredientsViewModel.handleIntent(
+                                            intent = it,
+                                            navController = navController
                                         )
-                                    },
+                                    }
                                 )
                             }
 

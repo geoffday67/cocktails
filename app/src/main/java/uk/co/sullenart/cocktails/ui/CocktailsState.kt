@@ -9,6 +9,7 @@ sealed class CocktailsState {
 
     data class Ingredients(
         val ingredients: List<Ingredient>,
+        val info: String? = null,
     ): CocktailsState()
 }
 
