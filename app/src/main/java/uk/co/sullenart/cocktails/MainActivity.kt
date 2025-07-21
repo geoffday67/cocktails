@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -21,6 +22,7 @@ import kotlinx.serialization.Serializable
 import uk.co.sullenart.cocktails.screen.DetailScreen
 import uk.co.sullenart.cocktails.screen.DrinksScreen
 import uk.co.sullenart.cocktails.screen.IngredientsScreen
+import uk.co.sullenart.cocktails.ui.CocktailsState
 import uk.co.sullenart.cocktails.ui.theme.CocktailsTheme
 import uk.co.sullenart.cocktails.viewmodel.DetailViewModel
 import uk.co.sullenart.cocktails.viewmodel.DrinksViewModel
@@ -50,7 +52,7 @@ class MainActivity : ComponentActivity() {
                             composable<IngredientsRoute> {
                                 val ingredientsViewModel: IngredientsViewModel by viewModels()
                                 IngredientsScreen(
-                                    ingredients = ingredientsViewModel.ingredientsList,
+                                    cocktailsState = ingredientsViewModel.stateFlow.collectAsState(CocktailsState.Empty()).value,
                                     onIngredientSelected = {
                                         ingredientsViewModel.handleIngredientSelected(
                                             ingredient = it,

@@ -66,10 +66,6 @@ class CocktailService @Inject constructor() {
         drinksImpl = retrofit.create(DrinksApi::class.java)
     }
 
-    /*
-    Visible UI -> Viewmodel -> Repository -> Datasource -> Network service (API)
-     */
-
     suspend fun listIngredients(): List<Ingredient> {
         return drinksImpl.getIngredientList().drinks.map {
             Ingredient(
