@@ -1,5 +1,5 @@
 [versions]
-agp = "8.12.0-alpha04"
+agp = "8.12.2"
 coilCompose = "3.2.0"
 hiltAndroid = "2.57"
 hiltAndroidCompiler = "2.57"
