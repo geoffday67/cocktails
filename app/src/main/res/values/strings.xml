@@ -4,4 +4,5 @@
     <string name="ingredient_name">Ingredient Name</string>"
     <string name="drink_name">Drink Name</string>
     <string name="instructions">Instructions</string>
+    <string name="cocktail_name">Cocktail Name</string>"
 </resources>
